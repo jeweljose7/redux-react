@@ -1,0 +1,57 @@
+/*li {
+  height: 3px;
+  width: 5px;
+  background-color: white;
+}*/
+.page {
+    text-align: center;
+    background-color: #b95757;
+    width: 90%;
+    height: 600px;
+    margin: auto;
+}
+.header {
+  background-color: #800000;
+  height: 10%;
+  font: 
+}
+.header_text {
+    color: white;
+    font-size: 25px;
+    font-weight: 600
+}
+.products {
+  background-color: #9a4c54;
+  
+}
+.item {
+  height: 50px;
+}
+.itemname {
+  display: inline-block;
+  width: 40%;
+}
+.itemcost {
+  display: inline-block;
+  width: 20%;
+}
+.stock {
+  display: inline-block;
+  width: 20%;
+}
+.addtocart {
+  display: inline-block;
+  width:10%; 
+}
+
+
+
+
+
+
+
+
+.yourcart {
+  background-color: #b95757;
+  
+}
