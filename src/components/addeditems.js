@@ -19,15 +19,16 @@ const  mapDispatchToProps = (dispatch, ownProps) => {
 class Addeditems extends React.Component {
 	render()
 	{	
+
 		var productarray = this.props.allitems;
 		
 		if(productarray.length!==0){
 			console.log("oooooooooooooo"+productarray[0].counter)
 		var list = productarray.map((val)=> 
 			(<div className="item" key={Math.random()}>
-				<div className="itemname">{val.name}</div>
-				<div className="itemcost">{val.cost}</div>
-				<div className="itemcount">{val.counter}</div>
+				<div className="addeditemname">{val.name}</div>
+				<div className="addeditemcost">{val.cost}</div>
+				<div className="addeditemcount">{val.counter}</div>
 
 			</div>));
 

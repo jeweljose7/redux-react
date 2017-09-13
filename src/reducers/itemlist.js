@@ -28,18 +28,13 @@ var Itemlist= function productarray( state =  [
 		    	var newstate = [...state];
 		    	var newproductkey = action.key.key;
 		    	for(var i=0;i<3;i++) {
-		    		
 		    		if(state[i].key == newproductkey) {
-		    			if(state[i].left==0) {
-
-		    			}
+		    			if(state[i].left==0) {}
 		    			else {
 		    				state[i].left=state[i].left-1;
 		    			}
 		    		}
 		    	}
-		    	
-		    	console.log("keeeynew-->"+action.key.key)
 		    	return newstate;
 		    default:
 		      return state;

@@ -6,19 +6,26 @@ var Addeditems = function Addnewitem(state = [], action) {
     case "ADD_TO_CART":
     	
     	var currentactionkey = action.key.key;
-    	
     	var flag=1;
     	
     	for(var i=0;i<state.length;i++) {
     		if(currentactionkey == state[i].key) {
-    			state[i].counter++;
-    			console.log("newobj"+state[i].counter);
-    			flag=0
+    			if(state[i].left==1) {
+    				state[i].counter++;
+	    			state[i].left--;
+    				document.getElementById(state[i].key).disabled = true;
+    				flag=0
+    			}
+    			else {
+	    			state[i].counter++;
+	    			state[i].left--;
+	    			flag=0
+    			}
     		}
     	}    		
 		if(flag==1) {
 			var newstate = [...state];
-			var newobj = {"key":action.key.key,"name":action.key.name,"cost":action.key.cost,"counter":1}
+			var newobj = {"key":action.key.key,"name":action.key.name,"cost":action.key.cost,"left":action.key.left-1,"counter":1}
 			console.log("newobj"+newobj.counter);
 			newstate=newstate.concat(newobj);
 			return newstate;
