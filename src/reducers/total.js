@@ -11,7 +11,7 @@ var Updatetotal = function Findnewtotal(state = {total:0}, action) {
     	return newstate;
     case "CHECKOUT":
 		var newstate = [...state];
-    	newstate.total = 0;
+    	newstate.total = state.total;
     	return newstate;
 	default:
       return state;
