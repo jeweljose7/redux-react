@@ -21,6 +21,9 @@ class Filterinput extends React.Component {
 const  mapDispatchToProps = (dispatch, ownProps) => {
 	return{
 	  	onclick:(min,max)=> {
+	  		if(min==""){console.log("sfvbsdf");min=0;}
+	  		if(max==""){max=100000;}	  		
+	  		console.log("min-->"+min+"max---->"+max)
 	  		dispatch(Dofilter(min,max));	  		
 		}
 	};
