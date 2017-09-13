@@ -2,6 +2,7 @@ import React from 'react';
 import List from'./defaultlist.js'
 import Addeditems from'./addeditems.js'
 import Total from './total.js'
+import Filter from './filter.js'
 import {Col, CardPanel} from 'react-materialize'
 
 
@@ -19,7 +20,9 @@ class App extends React.Component {
               </CardPanel>
             </Col>
           </div>
-
+          <div className="filter">
+            <Filter />
+          </div>
           <div className="products">
             <Col s={12} m={5}>
               <CardPanel className="grey lighten-1 black-text">
