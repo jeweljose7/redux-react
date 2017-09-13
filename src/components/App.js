@@ -15,35 +15,40 @@ class App extends React.Component {
         <div className="page">
           <div className="header">
             <Col s={12} m={5}>
-              <CardPanel className=" blue darken-4 white-text">
+              <CardPanel className=" blue-grey darken-3 white-text">
                   <span>SHOPPING CART</span>
               </CardPanel>
             </Col>
           </div>
           <div className="filter">
-            <Filter />
+            <Col s={12} m={5}>
+                <CardPanel className=" blue-grey darken-2 white-text">
+                    <span><Filter /></span>
+                </CardPanel>
+              </Col>
+            
           </div>
           <div className="products">
             <Col s={12} m={5}>
-              <CardPanel className="grey lighten-1 black-text">
-                  <span> PRODUCTS <List /></span>
+              <CardPanel className=" blue-grey darken-2 white-text">
+                  <span> <h5>PRODUCTS</h5> <List /></span>
               </CardPanel>
             </Col>
           </div>
           <div className="yourcart">
             <Col s={12} m={5}>
-              <CardPanel className="grey lighten-1 black-text">
-                  <span> CART
+              <CardPanel className=" blue-grey darken-2 white-text">
+                  <span> <h5>CART</h5>
                     <div className="cartlist">
                       <Col s={12} m={5}>
-                        <CardPanel className="blue darken-4 black-text">
+                        <CardPanel className="blue-grey darken-1 white-text">
                             <span> <Addeditems /> </span>
                         </CardPanel>
                       </Col>
                     </div>
                     <div className="total">
                       <Col s={12} m={5}>
-                      <CardPanel className="blue darken-4 black-text">
+                      <CardPanel className="blue-grey darken-1 white-text">
                           <span>TOTAL <Total /> </span>
                       </CardPanel>
                       </Col>

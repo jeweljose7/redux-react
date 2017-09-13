@@ -1,6 +1,7 @@
 import React from 'react'; 
 import { connect } from 'react-redux';
 import {Checkout} from '../actions/checkout'; 
+import {Button} from 'react-materialize'
 
 
 const mapStateToProps = (state,ownProps) => {
@@ -23,7 +24,7 @@ class Addeditems extends React.Component {
 		var productarray = this.props.allitems;
 		
 		if(productarray.length!==0){
-			console.log("oooooooooooooo"+productarray[0].counter)
+			
 		var list = productarray.map((val)=> 
 			(<div className="item" key={Math.random()}>
 				<div className="addeditemname">{val.name}</div>
@@ -35,7 +36,7 @@ class Addeditems extends React.Component {
 		return (
 			<div>
 				{list}
-				<button onClick={()=>this.props.onclick()} className="checkout">checkout</button>
+				<Button onClick={()=>this.props.onclick()} className="checkout">checkout</Button>
 			</div>
 		);
 	}
