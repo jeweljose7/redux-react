@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import {Checkout} from '../actions/checkout'; 
 import {Button} from 'react-materialize'
 
-
 const mapStateToProps = (state,ownProps) => {
 	return{
 		allitems:state.addeditems
@@ -16,30 +15,24 @@ const  mapDispatchToProps = (dispatch, ownProps) => {
 	  	}
 	};
 };
-
 class Addeditems extends React.Component {
 	render()
 	{	
-
-		var productarray = this.props.allitems;
-		
-		if(productarray.length!==0){
-			
-		var list = productarray.map((val)=> 
-			(<div className="item" key={Math.random()}>
-				<div className="addeditemname">{val.name}</div>
-				<div className="addeditemcost">{val.cost}</div>
-				<div className="addeditemcount">{val.counter}</div>
-
-			</div>));
-
-		return (
-			<div>
-				{list}
-				<Button onClick={()=>this.props.onclick()} className="checkout">checkout</Button>
-			</div>
-		);
-	}
+		var productarray = this.props.allitems;		
+		if(productarray.length!==0){			
+			var list = productarray.map((val)=> 
+				(<div className="item" key={Math.random()}>
+					<div className="addeditemname">{val.name}</div>
+					<div className="addeditemcost">{val.cost}</div>
+					<div className="addeditemcount">{val.counter}</div>
+				</div>));
+			return (
+				<div>
+					{list}
+					<Button onClick={()=>this.props.onclick()} className="checkout">checkout</Button>
+				</div>
+			);
+		}
 	return <div>Select an Item</div>
 	}
 }

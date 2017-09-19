@@ -4,8 +4,7 @@ import Addeditems from'./addeditems.js'
 import Total from './total.js'
 import Filter from './filter.js'
 import {Col, CardPanel} from 'react-materialize'
-
-
+import {Button} from 'react-materialize'
 import '../App.css';
 
 class App extends React.Component {
@@ -53,6 +52,7 @@ class App extends React.Component {
                       </CardPanel>
                       </Col>
                     </div>
+                    <Button>checkout</Button>
                   </span>
               </CardPanel>
             </Col>

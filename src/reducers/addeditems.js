@@ -3,11 +3,9 @@ import Checkout from '../actions/checkout';
 
 var Addeditems = function Addnewitem(state = [], action) {
   switch (action.type) {
-    case "ADD_TO_CART":
-    	
-    	var currentactionkey = action.key.key;
-    	var flag=1;
-    	
+    case "ADD_TO_CART":    	
+    	var currentactionkey = action.key.productID;
+    	var flag=1;    	
     	for(var i=0;i<state.length;i++) {
     		if(currentactionkey == state[i].key) {
     			if(state[i].left==1) {
@@ -25,8 +23,7 @@ var Addeditems = function Addnewitem(state = [], action) {
     	}    		
 		if(flag==1) {
 			var newstate = [...state];
-			var newobj = {"key":action.key.key,"name":action.key.name,"cost":action.key.cost,"left":action.key.left-1,"counter":1}
-			console.log("newobj"+newobj.counter);
+			var newobj = {"key":action.key.productID,"name":action.key.name,"cost":action.key.price,"left":action.key.quantity-1,"counter":1}
 			newstate=newstate.concat(newobj);
 			return newstate;
 		}
