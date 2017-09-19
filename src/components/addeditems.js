@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import {Checkout} from '../actions/checkout'; 
 import {Button} from 'react-materialize'
+import {Link} from 'react-router-dom'
 
 const mapStateToProps = (state,ownProps) => {
 	return{
@@ -28,8 +29,9 @@ class Addeditems extends React.Component {
 				</div>));
 			return (
 				<div>
-					{list}
+					{list}<Link to = '/checkout'>
 					<Button onClick={()=>this.props.onclick()} className="checkout">checkout</Button>
+					</Link>
 				</div>
 			);
 		}

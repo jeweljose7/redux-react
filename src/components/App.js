@@ -51,8 +51,7 @@ class App extends React.Component {
                           <span>TOTAL <Total /> </span>
                       </CardPanel>
                       </Col>
-                    </div>
-                    <Button>checkout</Button>
+                    </div>                                    
                   </span>
               </CardPanel>
             </Col>

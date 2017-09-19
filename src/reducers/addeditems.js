@@ -33,8 +33,7 @@ var Addeditems = function Addnewitem(state = [], action) {
 		}
 		
 	case "CHECKOUT":
-		var newstate = [...state];
-    	newstate = [];
+		var newstate = [...state];    	
     	return newstate;
 	default:
       return state;

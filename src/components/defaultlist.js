@@ -58,7 +58,7 @@ const  mapDispatchToProps = (dispatch, ownProps) => {
 				console.log(error);
 			});	  		
 		},
-		initialdata:()=>{
+		initialdata:()=>{		
 			axios.get('http://localhost:8000/productListing')		
 			.then(function(response) {				
 				dispatch(Initialstate(response.data.result));				
